@@ -5,13 +5,37 @@
 </ion-header>
 
 <ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+  <ion-list>
+  
+    <ion-item>
+      <ion-label>Name</ion-label>
+      <ion-input type="text" [(ngModel)]="d_name"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label>Type</ion-label>
+      <ion-input type="text" [(ngModel)]="d_type"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label>User</ion-label>
+      <ion-input type="text" [(ngModel)]="uApi"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>End Node 1</ion-label>
+      <ion-input type="text" [(ngModel)]="end_node1"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>End Node 2</ion-label>
+      <ion-input type="text" [(ngModel)]="end_node2"></ion-input>
+    </ion-item>
+
+    
+  </ion-list>
+  
+  <div padding>
+    <button block (click)="addGateways()">Add gateway</button>
+  </div>
+  <h1>{{show2}}</h1>
 </ion-content>
